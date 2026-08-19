@@ -15,7 +15,7 @@ The versions are exact pins. FoldKit's experimental server import is isolated in
 This package is intentionally not published to npm. Install a known repository commit instead of a moving branch:
 
 ```sh
-npm install github:birbprophet/astro-renderer-foldkit#06c7312886bbf3d2f470e5727d10411f435ae98f
+npm install github:birbprophet/astro-renderer-foldkit#e6c5a585a64a924c34937a526947c9b70ed26f7b
 ```
 
 When upgrading, choose and review a new commit explicitly.
