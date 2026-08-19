@@ -1,0 +1,42 @@
+{
+  "name": "astro-renderer-foldkit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A server-only Astro renderer for FoldKit components.",
+  "bugs": {
+    "url": "https://github.com/birbprophet/astro-renderer-foldkit/issues"
+  },
+  "license": "MIT",
+  "author": "milkenjoyer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/birbprophet/astro-renderer-foldkit.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check"
+  },
+  "dependencies": {
+    "astro": "7.2.2",
+    "effect": "4.0.0-rc.110",
+    "foldkit": "0.147.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.2.0",
+    "typescript": "7.0.2",
+    "vite-plus": "0.2.9"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.2.9"
+  }
+}

@@ -1,0 +1,52 @@
+---
+import Workforce from "../components/workforce.ts";
+
+/**
+ * Props cross the Astro boundary as plain data, so `robots` is the encoded
+ * six-state AsyncData the component's Props codec decodes. One robot ran, one
+ * refused, one has never run — the three branches the view draws differently.
+ */
+const robots = {
+  _tag: "Success",
+  data: [
+    {
+      enrolmentId: "enr_1",
+      expectedShape: "supplier-ledger-v3",
+      feedName: "Supplier ledger",
+      lastFinishedAt: 1_755_500_000_000,
+      lastRefusalReason: null,
+      lastRunId: "run_1",
+      lastStartedAt: 1_755_499_000_000,
+    },
+    {
+      enrolmentId: "enr_2",
+      expectedShape: "commission-sheet-v1",
+      feedName: "Commission sheet",
+      lastFinishedAt: 1_755_400_000_000,
+      lastRefusalReason: "Column `net_total` arrived empty on 14 rows.",
+      lastRunId: "run_2",
+      lastStartedAt: 1_755_399_000_000,
+    },
+    {
+      enrolmentId: "enr_3",
+      expectedShape: null,
+      feedName: "Freight invoices",
+      lastFinishedAt: null,
+      lastRefusalReason: null,
+      lastRunId: null,
+      lastStartedAt: null,
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Foldkit renderer proof</title>
+  </head>
+  <body>
+    <Workforce locale="en-US" robots={robots} />
+  </body>
+</html>
