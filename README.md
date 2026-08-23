@@ -20,6 +20,9 @@ npm install github:birbprophet/astro-renderer-foldkit#<reviewed-commit>
 
 When upgrading, choose and review a new commit explicitly.
 
+The package exports its TypeScript source entry so an exact Git revision works without relying
+on a package-manager prepare hook to create `dist`.
+
 ## Use
 
 Register the renderer in Astro and declare FoldKit views with an Effect Schema codec:
