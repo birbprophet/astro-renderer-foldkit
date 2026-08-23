@@ -4,7 +4,6 @@ import * as Effect from "effect/Effect";
 import * as Result from "effect/Result";
 import * as S from "effect/Schema";
 import type { Html, HtmlBuilder } from "foldkit/html";
-import { m } from "foldkit/message";
 import { describe, expect, it } from "vite-plus/test";
 
 import { foldkitComponent, isFoldkitComponent } from "../src/adapter.ts";
@@ -24,10 +23,10 @@ import { foldkitComponent, isFoldkitComponent } from "../src/adapter.ts";
 const repoRoot = new URL("../", import.meta.url);
 
 /** The pinned version, exact. A range would defeat the whole arrangement. */
-const PINNED = "0.147.0";
+const PINNED = "0.149.0";
 
-const Pressed = m("Pressed");
-type Message = ReturnType<typeof Pressed>;
+type Message = Readonly<{ _tag: "Pressed" }>;
+const Pressed = (): Message => ({ _tag: "Pressed" });
 
 const Props = S.Struct({ label: S.String });
 
@@ -77,7 +76,7 @@ describe("the experimental surface stays behind one module", () => {
   });
 });
 
-describe("what foldkit 0.147.0 renders, and what it leaves out", () => {
+describe("what FoldKit 0.149.0 renders, and what it leaves out", () => {
   it("draws a button carrying an OnClick as a bare button", async () => {
     const outcome = await drawn({ label: "Send file" });
 

@@ -1,6 +1,6 @@
 {
   "name": "astro-renderer-foldkit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "A server-only Astro renderer for FoldKit components.",
   "bugs": {
@@ -29,8 +29,8 @@
   },
   "dependencies": {
     "astro": "7.2.4",
-    "effect": "4.0.0-rc.110",
-    "foldkit": "0.148.2"
+    "effect": "4.0.0-rc.111",
+    "foldkit": "0.149.0"
   },
   "devDependencies": {
     "@types/node": "26.2.0",

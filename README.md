@@ -4,9 +4,9 @@ A server-only [Astro](https://astro.build/) renderer for [FoldKit](https://githu
 
 ## Targets
 
-- Astro `7.2.2`
-- FoldKit `0.147.0`
-- Effect `4.0.0-rc.110`
+- Astro `7.2.4`
+- FoldKit `0.149.0`
+- Effect `4.0.0-rc.111`
 
 The versions are exact pins. FoldKit's experimental server import is isolated in `src/adapter.ts`, so its compatibility boundary is one file and its behavior is covered by the adapter tests.
 
@@ -15,7 +15,7 @@ The versions are exact pins. FoldKit's experimental server import is isolated in
 This package is intentionally not published to npm. Install a known repository commit instead of a moving branch:
 
 ```sh
-npm install github:birbprophet/astro-renderer-foldkit#e6c5a585a64a924c34937a526947c9b70ed26f7b
+npm install github:birbprophet/astro-renderer-foldkit#<reviewed-commit>
 ```
 
 When upgrading, choose and review a new commit explicitly.
