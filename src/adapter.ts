@@ -11,13 +11,12 @@ import type { Html, HtmlBuilder } from "foldkit/html";
  *
  * ⚠️ THE IMPORT ABOVE IS THE WHOLE POINT OF THIS FILE, AND NOTHING ELSE MAY
  * REPEAT IT. The server surface is marked `@experimental` by its author and it
- * took a breaking change between `0.147.0` and `0.148.0` — two versions
- * published a day apart. `tests/adapter.test.ts` walks the tracked tree and
+ * has changed across pre-1.0 releases. `tests/adapter.test.ts` walks the tracked tree and
  * fails if a second file names that path, so the next breaking release is one
  * file to fix rather than a landing-wide migration. Founder ruling, 2026-08-19,
  * under the pinned-pre-release bargain in [R26-113].
  *
- * The pin `foldkit@0.147.0` is exact in this package's manifest and in
+ * The pin `foldkit@0.152.0` is exact in this package's manifest and in
  * `apps/app`, and both resolve to one physical copy through bun's store. That
  * matters beyond version hygiene: Foldkit's render frame is module-local, so a
  * view built by a second instance of the library renders nothing. Two exact
@@ -70,7 +69,7 @@ const renderStatic = <Props, Message>(
   Effect.map(
     renderToString(
       {
-        init: () => [props, []] as const,
+        init: () => ({ model: props }),
         view: (model: Props, h: HtmlBuilder<Message>) => ({ body: view(model, h), title: "" }),
       },
       { isHydratable: false },
