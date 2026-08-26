@@ -14,7 +14,7 @@
   },
   "type": "module",
   "exports": {
-    ".": "./dist/index.mjs",
+    ".": "./src/index.ts",
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -42,6 +42,12 @@
       "name": "npm",
       "version": "12.0.2",
       "onFail": "download"
+    }
+  },
+  "publishConfig": {
+    "exports": {
+      ".": "./dist/index.mjs",
+      "./package.json": "./package.json"
     }
   }
 }
