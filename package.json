@@ -12,9 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/birbprophet/astro-renderer-foldkit.git"
   },
-  "files": [
-    "dist"
-  ],
   "type": "module",
   "exports": {
     ".": "./dist/index.mjs",

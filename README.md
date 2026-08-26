@@ -12,7 +12,8 @@ The versions are exact pins. FoldKit's experimental server import is isolated in
 
 ## Install from Git
 
-This package is intentionally not published to npm. Install a known repository commit instead of a moving branch:
+This package is intentionally not published to npm. It exports its TypeScript source for direct
+use by Vite and Astro. Install a known repository commit instead of a moving branch:
 
 ```sh
 npm install github:birbprophet/astro-renderer-foldkit#<reviewed-commit>
