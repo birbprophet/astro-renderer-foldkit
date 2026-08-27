@@ -61,10 +61,10 @@ The static constraints follow the server-rendering proof used for this package: 
 ## Development
 
 ```sh
-npm install
-npm test
-npm run check
-npm run build
+bun install
+bun run test
+bun run check
+bun run build
 ```
 
 The single CI workflow runs these checks on `depot-ubuntu-24.04`.

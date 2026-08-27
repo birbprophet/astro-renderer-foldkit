@@ -45,8 +45,8 @@
   },
   "devEngines": {
     "packageManager": {
-      "name": "npm",
-      "version": "12.0.2",
+      "name": "bun",
+      "version": "1.4.0",
       "onFail": "download"
     }
   }
