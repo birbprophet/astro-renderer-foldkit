@@ -5,7 +5,7 @@ A server-only [Astro](https://astro.build/) renderer for [FoldKit](https://githu
 ## Targets
 
 - Astro `7.2.7`
-- FoldKit `0.152.0`
+- FoldKit `0.153.0`
 - Effect `4.0.0-rc.112`
 
 The versions are exact pins. FoldKit's experimental server import is isolated in `src/adapter.ts`, so its compatibility boundary is one file and its behavior is covered by the adapter tests.

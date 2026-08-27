@@ -17,6 +17,12 @@
     ".": "./src/index.ts",
     "./package.json": "./package.json"
   },
+  "publishConfig": {
+    "exports": {
+      ".": "./dist/index.mjs",
+      "./package.json": "./package.json"
+    }
+  },
   "scripts": {
     "build": "vp pack",
     "dev": "vp pack --watch",
@@ -27,7 +33,7 @@
   "dependencies": {
     "astro": "7.2.7",
     "effect": "4.0.0-rc.112",
-    "foldkit": "0.152.0"
+    "foldkit": "0.153.0"
   },
   "devDependencies": {
     "@types/node": "26.3.0",
@@ -42,12 +48,6 @@
       "name": "npm",
       "version": "12.0.2",
       "onFail": "download"
-    }
-  },
-  "publishConfig": {
-    "exports": {
-      ".": "./dist/index.mjs",
-      "./package.json": "./package.json"
     }
   }
 }

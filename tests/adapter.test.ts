@@ -16,14 +16,14 @@ import { foldkitComponent, isFoldkitComponent } from "../src/adapter.ts";
  * permits the pin because the surface is adapter-isolated and conformance-passed;
  * this file is both halves of that sentence. The first case walks the tracked
  * tree and fails if a second module imports the experimental path. The rest
- * assert what `0.152.0` actually does, so a version bump that changes it fails
+ * assert what `0.153.0` actually does, so a version bump that changes it fails
  * here rather than in a rendered page.
  */
 
 const repoRoot = new URL("../", import.meta.url);
 
 /** The pinned version, exact. A range would defeat the whole arrangement. */
-const PINNED = "0.152.0";
+const PINNED = "0.153.0";
 
 type Message = Readonly<{ _tag: "Pressed" }>;
 
@@ -75,7 +75,7 @@ describe("the experimental surface stays behind one module", () => {
   });
 });
 
-describe("what foldkit 0.152.0 renders, and what it leaves out", () => {
+describe("what foldkit 0.153.0 renders, and what it leaves out", () => {
   it("draws a button carrying an OnClick as a bare button", async () => {
     const outcome = await drawn({ label: "Send file" });
 
