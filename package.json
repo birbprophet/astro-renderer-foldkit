@@ -36,6 +36,7 @@
     "foldkit": "0.156.0"
   },
   "devDependencies": {
+    "@foldkit/vite-plugin": "0.20.0",
     "@types/node": "26.3.0",
     "typescript": "7.0.2",
     "vite-plus": "0.3.0"
