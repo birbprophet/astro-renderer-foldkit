@@ -4,7 +4,6 @@ import * as Effect from "effect/Effect";
 import * as Result from "effect/Result";
 import * as S from "effect/Schema";
 import type { Html, HtmlBuilder } from "foldkit/html";
-import { m } from "foldkit/message";
 import { describe, expect, it } from "vite-plus/test";
 
 import { foldkitComponent, isFoldkitComponent } from "../src/adapter.ts";
@@ -13,21 +12,20 @@ import { foldkitComponent, isFoldkitComponent } from "../src/adapter.ts";
  * The half of R26-113's bargain that an exact pin does not cover.
  *
  * `foldkit/experimental/server` is marked `@experimental` by its author and took
- * a breaking change between `0.147.0` and `0.148.0`, one day apart. The ruling
+ * breaking changes across pre-1.0 releases. The ruling
  * permits the pin because the surface is adapter-isolated and conformance-passed;
  * this file is both halves of that sentence. The first case walks the tracked
  * tree and fails if a second module imports the experimental path. The rest
- * assert what `0.147.0` actually does, so a version bump that changes it fails
+ * assert what `0.153.0` actually does, so a version bump that changes it fails
  * here rather than in a rendered page.
  */
 
 const repoRoot = new URL("../", import.meta.url);
 
 /** The pinned version, exact. A range would defeat the whole arrangement. */
-const PINNED = "0.147.0";
+const PINNED = "0.153.0";
 
-const Pressed = m("Pressed");
-type Message = ReturnType<typeof Pressed>;
+type Message = Readonly<{ _tag: "Pressed" }>;
 
 const Props = S.Struct({ label: S.String });
 
@@ -35,7 +33,7 @@ const button = foldkitComponent({
   Props,
   name: "button",
   view: (props: typeof Props.Type, h: HtmlBuilder<Message>): Html =>
-    h.button([h.Class("story-action"), h.OnClick(Pressed())], [props.label]),
+    h.button([h.Class("story-action"), h.OnClick({ _tag: "Pressed" })], [props.label]),
 });
 
 const drawn = (props: unknown): Promise<Result.Result<string, unknown>> =>
@@ -77,7 +75,7 @@ describe("the experimental surface stays behind one module", () => {
   });
 });
 
-describe("what foldkit 0.147.0 renders, and what it leaves out", () => {
+describe("what foldkit 0.153.0 renders, and what it leaves out", () => {
   it("draws a button carrying an OnClick as a bare button", async () => {
     const outcome = await drawn({ label: "Send file" });
 

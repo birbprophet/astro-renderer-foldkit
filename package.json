@@ -1,6 +1,6 @@
 {
   "name": "astro-renderer-foldkit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "A server-only Astro renderer for FoldKit components.",
   "bugs": {
@@ -12,13 +12,16 @@
     "type": "git",
     "url": "git+https://github.com/birbprophet/astro-renderer-foldkit.git"
   },
-  "files": [
-    "dist"
-  ],
   "type": "module",
   "exports": {
-    ".": "./dist/index.mjs",
+    ".": "./src/index.ts",
     "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "exports": {
+      ".": "./dist/index.mjs",
+      "./package.json": "./package.json"
+    }
   },
   "scripts": {
     "build": "vp pack",
@@ -28,16 +31,23 @@
     "prepare": "vp pack"
   },
   "dependencies": {
-    "astro": "7.2.4",
-    "effect": "4.0.0-rc.110",
-    "foldkit": "0.148.2"
+    "astro": "7.2.7",
+    "effect": "4.0.0-rc.112",
+    "foldkit": "0.153.0"
   },
   "devDependencies": {
-    "@types/node": "26.2.0",
+    "@types/node": "26.3.0",
     "typescript": "7.0.2",
-    "vite-plus": "0.2.9"
+    "vite-plus": "0.3.0"
   },
   "overrides": {
-    "vite": "npm:@voidzero-dev/vite-plus-core@0.2.9"
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.3.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "version": "1.4.0",
+      "onFail": "download"
+    }
   }
 }

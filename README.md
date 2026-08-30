@@ -4,18 +4,19 @@ A server-only [Astro](https://astro.build/) renderer for [FoldKit](https://githu
 
 ## Targets
 
-- Astro `7.2.2`
-- FoldKit `0.147.0`
-- Effect `4.0.0-rc.110`
+- Astro `7.2.7`
+- FoldKit `0.153.0`
+- Effect `4.0.0-rc.112`
 
 The versions are exact pins. FoldKit's experimental server import is isolated in `src/adapter.ts`, so its compatibility boundary is one file and its behavior is covered by the adapter tests.
 
 ## Install from Git
 
-This package is intentionally not published to npm. Install a known repository commit instead of a moving branch:
+This package is intentionally not published to npm. It exports its TypeScript source for direct
+use by Vite and Astro. Install a known repository commit instead of a moving branch:
 
 ```sh
-npm install github:birbprophet/astro-renderer-foldkit#e6c5a585a64a924c34937a526947c9b70ed26f7b
+npm install github:birbprophet/astro-renderer-foldkit#<reviewed-commit>
 ```
 
 When upgrading, choose and review a new commit explicitly.
@@ -60,10 +61,10 @@ The static constraints follow the server-rendering proof used for this package: 
 ## Development
 
 ```sh
-npm install
-npm test
-npm run check
-npm run build
+bun install
+bun run test
+bun run check
+bun run build
 ```
 
 The single CI workflow runs these checks on `depot-ubuntu-24.04`.
