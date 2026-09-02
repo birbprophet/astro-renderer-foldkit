@@ -16,7 +16,7 @@ import type { Html, HtmlBuilder } from "foldkit/html";
  * file to fix rather than a landing-wide migration. Founder ruling, 2026-08-19,
  * under the pinned-pre-release bargain in [R26-113].
  *
- * The pin `foldkit@0.156.0` is exact in this package's manifest and in
+ * The pin `foldkit@0.157.0` is exact in this package's manifest and in
  * `apps/app`, and both resolve to one physical copy through bun's store. That
  * matters beyond version hygiene: Foldkit's render frame is module-local, so a
  * view built by a second instance of the library renders nothing. Two exact

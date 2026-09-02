@@ -31,12 +31,12 @@
     "prepare": "vp pack"
   },
   "dependencies": {
-    "astro": "7.2.7",
+    "astro": "7.2.10",
     "effect": "4.0.0-rc.112",
-    "foldkit": "0.156.0"
+    "foldkit": "0.157.0"
   },
   "devDependencies": {
-    "@foldkit/vite-plugin": "0.20.0",
+    "@foldkit/vite-plugin": "0.20.1",
     "@types/node": "26.3.0",
     "typescript": "7.0.2",
     "vite-plus": "0.3.0"
