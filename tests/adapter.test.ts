@@ -23,7 +23,7 @@ import { foldkitComponent, isFoldkitComponent } from "../src/adapter.ts";
 const repoRoot = new URL("../", import.meta.url);
 
 /** The pinned version, exact. A range would defeat the whole arrangement. */
-const PINNED = "0.157.0";
+const PINNED = "0.158.2";
 
 type Message = Readonly<{ _tag: "Pressed" }>;
 
@@ -75,7 +75,7 @@ describe("the experimental surface stays behind one module", () => {
   });
 });
 
-describe("what foldkit 0.157.0 renders, and what it leaves out", () => {
+describe("what foldkit 0.158.2 renders, and what it leaves out", () => {
   it("draws a button carrying an OnClick as a bare button", async () => {
     const outcome = await drawn({ label: "Send file" });
 
