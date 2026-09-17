@@ -6,14 +6,18 @@
       "name": "astro-renderer-foldkit",
       "dependencies": {
         "astro": "7.2.10",
-        "effect": "4.0.0-rc.112",
-        "foldkit": "0.158.2",
       },
       "devDependencies": {
-        "@foldkit/vite-plugin": "0.20.1",
+        "@foldkit/vite-plugin": "^0.21.0",
         "@types/node": "26.3.0",
+        "effect": "4.0.0-rc.112",
+        "foldkit": "0.159.0",
         "typescript": "7.0.2",
         "vite-plus": "0.3.0",
+      },
+      "peerDependencies": {
+        "effect": ">=4.0.0-rc.112",
+        "foldkit": ">=0.159.0",
       },
     },
   },
@@ -147,7 +151,7 @@
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.28.2", "", { "os": "win32", "cpu": "x64" }, "sha512-5ebpxr3nWMzrL/rnUI755Jkuee0bHL/Gq0WTF9lvcpv73wAp5eu8MfBUgWK9bhWvZjj7yX8etf/8tI8Ney695g=="],
 
-    "@foldkit/vite-plugin": ["@foldkit/vite-plugin@0.20.1", "", { "dependencies": { "magic-string": "^1.2.3", "ws": "^8.21.3" }, "peerDependencies": { "effect": "4.0.0-rc.112", "foldkit": ">=0.153.0", "vite": "^7.0.0 || ^8.0.0" } }, "sha512-nWUDL0GCWU5CJMkzJhtDRa7s0kDOUqIpufCaIsB5Hb3d6xKIg+F6IuckL7Vbt9dBPaPbpQZW5R1oOlNO76jVlw=="],
+    "@foldkit/vite-plugin": ["@foldkit/vite-plugin@0.21.0", "", { "dependencies": { "magic-string": "^1.2.3", "ws": "^8.21.3" }, "peerDependencies": { "effect": "4.0.0-rc.112", "foldkit": ">=0.159.0", "vite": "^7.0.0 || ^8.0.0" } }, "sha512-jcj8IOTCHfXYXi7js9BTeBmQOWoS4rVOkjc4+NzCaMJNiqgC9yqkzmic9hU4oecqRHLM2Dq0tqPRheLpJQ0EiA=="],
 
     "@img/colour": ["@img/colour@1.1.0", "", {}, "sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ=="],
 
@@ -599,7 +603,7 @@
 
     "flattie": ["flattie@1.1.1", "", {}, "sha512-9UbaD6XdAL97+k/n+N7JwX46K/M6Zc6KcFYskrYL8wbBV/Uyk0CTAMY0VT+qiK5PM7AIc9aTWYtq65U7T+aCNQ=="],
 
-    "foldkit": ["foldkit@0.158.2", "", { "dependencies": { "parse5": "^8.0.1" }, "peerDependencies": { "effect": "4.0.0-rc.112" } }, "sha512-zA2Bj0W6DHPhPYXGtWduMJjuKnAo+uDyVNLSp5SO3panujtW5Tbh3oLqXhaOcvomqMx6DO2SUtTy+R5s0ut3wQ=="],
+    "foldkit": ["foldkit@0.159.0", "", { "dependencies": { "parse5": "^8.0.1" }, "peerDependencies": { "effect": "4.0.0-rc.112" } }, "sha512-uGluoxROxwQazVjb/fcKOSTOLgYTcF73S2vmhtl+ZgafiGZYc+eKOtk9C6xZQxbVBtRBY60tbrXJVkKFRRWICw=="],
 
     "fontace": ["fontace@0.4.1", "", { "dependencies": { "fontkitten": "^1.0.2" } }, "sha512-lDMvbAzSnHmbYMTEld5qdtvNH2/pWpICOqpean9IgC7vUbUJc3k+k5Dokp85CegamqQpFbXf0rAVkbzpyTA8aw=="],
 
