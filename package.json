@@ -37,7 +37,7 @@
     "@foldkit/vite-plugin": "^0.21.0",
     "@types/node": "26.3.0",
     "effect": "4.0.0-rc.112",
-    "foldkit": "0.159.0",
+    "foldkit": "0.163.0",
     "typescript": "7.0.2",
     "vite-plus": "0.3.0"
   },
