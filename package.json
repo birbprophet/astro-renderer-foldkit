@@ -34,7 +34,7 @@
     "astro": "7.2.10"
   },
   "devDependencies": {
-    "@foldkit/vite-plugin": "^0.21.0",
+    "@foldkit/vite-plugin": "^0.24.0",
     "@types/node": "26.3.0",
     "effect": "4.0.0-rc.112",
     "foldkit": "0.159.0",
