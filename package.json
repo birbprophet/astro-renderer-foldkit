@@ -31,7 +31,7 @@
     "prepare": "vp pack"
   },
   "dependencies": {
-    "astro": "7.2.10"
+    "astro": "7.3.5"
   },
   "devDependencies": {
     "@foldkit/vite-plugin": "^0.21.0",
